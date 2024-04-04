@@ -1,15 +1,19 @@
-/* App.css */
-
 .app {
   margin: 20px auto;
   padding: 20px;
   max-width: 600px;
   border: 1px solid #ccc;
   border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: grey;
 }
 
 .task-filters {
   margin-bottom: 10px;
+  margin-top: 25px;
+  font-weight: bold;
 }
 
 .task-filters button {
@@ -18,4 +22,33 @@
 
 .completed {
   text-decoration: line-through;
+}
+
+h1 {
+  text-align: center;
+}
+
+button,
+li {
+  cursor: pointer;
+  text-align: center;
+}
+.buttonFocused {
+  background-color: black;
+  color: white;
+}
+li {
+  list-style: none;
+  margin-bottom: 20px;
+  width: 200px;
+  height: 25px;
+  border-bottom: 1px solid black;
+}
+
+li:hover {
+  background-color: black;
+  color: white;
+  transition: 0.3s;
+  text-align: center;
+  font-weight: bold;
 }

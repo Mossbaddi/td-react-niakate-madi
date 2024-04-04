@@ -1,7 +1,5 @@
-// TaskForm.js
-
 import React, { useState } from 'react'
-
+import './TaskForm.css'
 function TaskForm({ onAddTask }) {
   const [taskText, setTaskText] = useState('')
 

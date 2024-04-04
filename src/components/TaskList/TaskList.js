@@ -1,7 +1,5 @@
-// TaskList.js
-
 import React from 'react'
-
+import './TaskList.css'
 function TaskList({ tasks, onToggleTaskCompletion }) {
   return (
     <ul data-cy="task-list">
