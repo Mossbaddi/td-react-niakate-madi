@@ -6,12 +6,17 @@ import TaskForm from './TaskForm'
 import TaskList from './TaskList'
 
 function App() {
-  const [tasks, setTasks] = useState([])
+  const storedTask = JSON.parse(localStorage.getItem('tasks'))
+  const [tasks, setTasks] = useState(storedTask != null ? storedTask : [])
   const [filter, setFilter] = useState('all')
 
   // Fonction pour récupérer les tâches depuis le localStorage
   const getTasksFromLocalStorage = () => {
     const storedTasks = JSON.parse(localStorage.getItem('tasks'))
+
+    console.log('stored tasks')
+    console.log(storedTasks)
+    console.log('stored tasks')
     if (storedTasks) {
       setTasks(storedTasks)
     }
