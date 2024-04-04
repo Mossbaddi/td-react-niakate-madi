@@ -8,7 +8,7 @@ function TaskList({ tasks, onToggleTaskCompletion }) {
       {tasks.map((task) => (
         <li
           key={task.id}
-          style={{ textDecoration: task.completed ? 'line-through' : 'none' }}
+          className={task.completed ? 'completed' : ''}
           onClick={() => onToggleTaskCompletion(task.id)}
           data-cy="task-item"
         >
