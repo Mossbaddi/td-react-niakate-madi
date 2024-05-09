@@ -17,11 +17,4 @@ jobs:
       run: npm install
 
     - name: Build
-      run: npm run build # Assurez-vous que cette commande est configurée dans votre package.json
-
-    - name: Run Cypress Tests
-      uses: cypress-io/github-action@v2
-      with:
-        start: npm start
-        wait-on: 'http://localhost:3000'
-        wait-on-timeout: 60 # Attente maximale pour que l'application démarre
+      run: npx cypress run
