@@ -9,8 +9,8 @@ jobs:
     runs-on: ubuntu-22.04
     steps:
       - name: install
-        run: npm i
-        
+        run: pwd
+
       - name: Checkout
         uses: actions/checkout@v4
       # Install npm dependencies, cache them correctly
