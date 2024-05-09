@@ -1,0 +1,27 @@
+name: Cypress Tests
+
+on: [push, pull_request]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Setup Node.js
+      uses: actions/setup-node@v1
+      with:
+        node-version: '14' # Spécifiez la version Node.js requise
+
+    - name: Install Dependencies
+      run: npm install
+
+    - name: Build
+      run: npm run build # Assurez-vous que cette commande est configurée dans votre package.json
+
+    - name: Run Cypress Tests
+      uses: cypress-io/github-action@v2
+      with:
+        start: npm start
+        wait-on: 'http://localhost:3000'
+        wait-on-timeout: 60 # Attente maximale pour que l'application démarre
